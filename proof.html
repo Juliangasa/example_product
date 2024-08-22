@@ -11,16 +11,22 @@
     <header class="w-full bg-[#252526] text-[#999] flex justify-center">
         <div class="w-full max-w-[960px] h-12 flex items-center px-4 md:px-0">
             <nav class="w-full flex justify-between">
+                <!--(((((pending adjust ul responsiveness, the idea is to use the burguer menu for small screens))))-->
                 <ul class="w-full flex justify-between gap-1.5 text-sm md:text-base">
                     <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="d-block mx-auto"><circle cx="12" cy="12" r="10"></circle><line x1="14.31" y1="8" x2="20.05" y2="17.94"></line><line x1="9.69" y1="8" x2="21.17" y2="8"></line><line x1="7.38" y1="12" x2="13.12" y2="2.06"></line><line x1="9.69" y1="16" x2="3.95" y2="6.06"></line><line x1="14.31" y1="16" x2="2.83" y2="16"></line><line x1="16.62" y1="12" x2="10.88" y2="21.94"></line></svg></li>
-                    <li class="">Tour</li>
-                    <li>Product</li>
-                    <li>Features</li>
-                    <li>Enterprise</li>
-                    <li>Support</li>
-                    <li>Pricing</li>
-                    <li>Cart</li>
+                    <li class="max-sm:hidden">Tour</li>
+                    <li class="max-sm:hidden">Product</li>
+                    <li class="max-sm:hidden">Features</li>
+                    <li class="max-sm:hidden">Enterprise</li>
+                    <li class="max-sm:hidden">Support</li>
+                    <li class="max-sm:hidden">Pricing</li>
+                    <li class="max-sm:hidden">Cart</li>
                 </ul>
+                <div class="flex flex-col w-6 h-5 border-2 border-[#999999] rounded justify-evenly items-center sm:hidden">
+                    <span class="border border-[#999999] w-3"></span>
+                    <span class="border border-[#999999] w-3"></span>
+                    <span class="border border-[#999999] w-3"></span>
+                </div>
             </nav>
         </div>
     </header>
