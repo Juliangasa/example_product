@@ -5,37 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/styles2.css">
 </head>
 <body class="m-0 p-0 box-border">
     <header class="w-full bg-[#252526] text-[#999] flex justify-center">
-        <div class="w-[960px] h-12 flex items-center">
+        <div class="w-full max-w-[960px] h-12 flex items-center px-4 md:px-0">
             <nav class="w-full flex justify-between">
-                <ul class="w-full flex justify-between gap-1.5">
+<!--"unordered list displayable on screens wider than 640px"-->
+                <ul class="w-full flex justify-between gap-1.5 text-sm md:text-base">
                     <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="d-block mx-auto"><circle cx="12" cy="12" r="10"></circle><line x1="14.31" y1="8" x2="20.05" y2="17.94"></line><line x1="9.69" y1="8" x2="21.17" y2="8"></line><line x1="7.38" y1="12" x2="13.12" y2="2.06"></line><line x1="9.69" y1="16" x2="3.95" y2="6.06"></line><line x1="14.31" y1="16" x2="2.83" y2="16"></line><line x1="16.62" y1="12" x2="10.88" y2="21.94"></line></svg></li>
-                    <li class="">Tour</li>
-                    <li>Product</li>
-                    <li>Features</li>
-                    <li>Enterprise</li>
-                    <li>Support</li>
-                    <li>Pricing</li>
-                    <li>Cart</li>
+                    <li class="max-sm:hidden">Tour</li>
+                    <li class="max-sm:hidden">Product</li>
+                    <li class="max-sm:hidden">Features</li>
+                    <li class="max-sm:hidden">Enterprise</li>
+                    <li class="max-sm:hidden">Support</li>
+                    <li class="max-sm:hidden">Pricing</li>
+                    <li class="max-sm:hidden">Cart</li>
                 </ul>
+<!--"burguer-menu displayable on screens smaller than 640px"-->
+                <div class="flex flex-col w-6 h-5 border-2 border-[#999999] rounded justify-evenly items-center sm:hidden">
+                    <span class="border border-[#999999] w-3"></span>
+                    <span class="border border-[#999999] w-3"></span>
+                    <span class="border border-[#999999] w-3"></span>
+                </div>
             </nav>
         </div>
     </header>
     <div class="w-full h-fit bg-[#FFFFFF] flex flex-col gap-3">
-        <div class="h-[507px] bg-[#F8F9FA] flex justify-center items-center p-5 overflow-hidden relative">
-            <div class="w-[579.66px] h-[314.8] bg-[#F8F9FA] flex flex-col items-center justify-center">
-                <h1 class="text-[56px] text-center mb-2">Punny headline</h1>
-                <p class="font-normal text-xl mb-4 text-center">And an even wittier subheading to boot. Jumpstart your marketing efforts with this example based on Apple's marketing pages.</p>
-                <button class="w-32 h-9 py-1.5 px-3 border border-[#6C757D] rounded bg-[#F8F9FA] text-base font-normal text-[#6C757D]">Coming soon</button>
+        <div class="w-full h-auto bg-[#F8F9FA] flex justify-center items-center p-5 overflow-hidden relative">
+            <div class="w-full max-w-[579.66px] h-auto flex flex-col items-center justify-center text-center">
+                <h1 class="text-3xl md:text-[56px] mb-2">Punny headline</h1>
+                <p class="font-normal text-lg md:text-xl mb-4">And an even wittier subheading to boot. Jumpstart your marketing efforts with this example based on Apple's marketing pages.</p>
+                <button class="w-full md:w-32 h-9 py-1.5 px-3 border border-[#6C757D] rounded bg-[#F8F9FA] text-base font-normal text-[#6C757D]">Coming soon</button>
             </div>
-            <div class="product-device box-shadow d-none d-md-block"></div>
-            <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
+            <div class="hidden md:block product-device box-shadow"></div>
+            <div class="hidden md:block product-device product-device-2 box-shadow"></div>
         </div>
-        <div class="px-5 w-full flex h-[505px] justify-between bg-[#FFFFFF] gap-5">
-            <div class=" flex flex-col justify-between items-center border-[black] w-[50%] h-full bg-[#343a40]">
+        <div class="w-full h-auto px-5 flex flex-col md:flex-row justify-between bg-[#FFFFFF] gap-5">
+            <div class=" flex flex-col justify-between items-center border-[black] w-full md:w-[50%] h-full bg-[#343a40]">
                 <div class="flex h-[124px] flex-col justify-center items-center py-4 my-4">
                     <h2 class="text-white text-[32px] mb-2 font-medium">Another headline</h2>
                     <p class="text-white mb-4 text-xl font-light">And an even wittier subheading.</p>
@@ -43,7 +50,7 @@
                 <div class="h-[300px] w-[80%] bg-[white] rounded-t-3xl">
                 </div>
             </div>
-            <div class="flex flex-col justify-between items-center border-[black] w-[50%] h-full bg-[#F8F9FA]">
+            <div class="flex flex-col justify-between items-center border-[black] w-full md:w-[50%] h-full bg-[#F8F9FA]">
                 <div class="flex h-[124px] flex-col justify-center items-center py-4 my-4">
                     <h2 class="text-[32px] text-black mb-2 font-medium">Another headline</h2>
                     <p class="text-black mb-4 text-xl font-light">And an even wittier subheading.</p>
@@ -52,8 +59,8 @@
                 </div>
             </div>
         </div> 
-        <div class="px-5 w-full flex h-[505px] justify-between bg-[#FFFFFF] gap-5">
-            <div class=" flex flex-col justify-between items-center border-[black] w-[50%] h-full bg-[#F8F9FA]">
+        <div class="px-5 w-full h-auto flex flex-col md:flex-row justify-between bg-[#FFFFFF] gap-5">
+            <div class=" flex flex-col justify-between items-center border-[black] w-full h-full bg-[#F8F9FA] md:w-[50%]">
                 <div class="flex h-[124px] flex-col justify-center items-center py-4 my-4">
                     <h2 class="text-black text-[32px] mb-2 font-medium">Another headline</h2>
                     <p class="text-black mb-4 text-xl font-light">And an even wittier subheading.</p>
@@ -61,7 +68,7 @@
                 <div class="h-[300px] w-[80%] bg-[#343A40] rounded-t-3xl">
                 </div>
             </div>
-            <div class="flex flex-col justify-between items-center border-[black] w-[50%] h-full bg-[#007BFF]">
+            <div class="w-full h-full flex flex-col justify-between items-center border-[black] bg-[#007BFF] md:w-[50%]">
                 <div class="flex h-[124px] flex-col justify-center items-center py-4 my-4">
                     <h2 class="text-white text-[32px] mb-2 font-medium">Another headline</h2>
                     <p class="text-white mb-4 text-xl font-light">And an even wittier subheading.</p>
@@ -70,16 +77,16 @@
                 </div>
             </div>
         </div>
-        <div class="px-5 w-full flex h-[505px] justify-between bg-[#FFFFFF] gap-5">
-            <div class=" flex flex-col justify-between items-center border-[black] w-[50%] h-full bg-[#F8F9FA]">
-                <div class="flex h-[124px] flex-col justify-center items-center py-4 my-4 bg-[#F8F9FA]">
+        <div class="px-5 w-full h-auto flex flex-col md:flex-row justify-between bg-[#FFFFFF] gap-5">
+            <div class=" flex flex-col justify-between items-center border-[black] w-full h-full bg-[#F8F9FA] md:w-[50%]">
+                <div class="flex h-[124px] flex-col justify-center items-center py-4 my-4">
                     <h2 class="text-black text-[32px] mb-2 font-medium">Another headline</h2>
                     <p class="text-black mb-4 text-xl font-light">And an even wittier subheading.</p>
                 </div>
                 <div class="h-[300px] w-[80%] bg-[#FFFFFF] rounded-t-3xl box-shadow">
                 </div>
             </div>
-            <div class=" flex flex-col justify-between items-center border-[black] w-[50%] h-full bg-[#F8F9FA]">
+            <div class="w-full h-full flex flex-col justify-between items-center border-[black] bg-[#F8F9FA] md:w-[50%]">
                 <div class="flex h-[124px] flex-col justify-center items-center py-4 my-4 bg-[#F8F9FA]">
                     <h2 class="text-black text-[32px] mb-2 font-medium">Another headline</h2>
                     <p class="text-black mb-4 text-xl font-light">And an even wittier subheading.</p>
@@ -88,16 +95,16 @@
                 </div>
             </div>
         </div>
-        <div class="px-5 w-full flex h-[505px] justify-between bg-[#FFFFFF] gap-5">
-            <div class=" flex flex-col justify-between items-center border-[black] w-[50%] h-full bg-[#F8F9FA]">
-                <div class="flex h-[124px] flex-col justify-center items-center py-4 my-4 bg-[#F8F9FA]">
+        <div class="px-5 w-full h-auto flex flex-col md:flex-row justify-between bg-[#FFFFFF] gap-5">
+            <div class=" flex flex-col justify-between items-center border-[black] w-full h-full bg-[#F8F9FA] md:w-[50%]">
+                <div class="flex h-[124px] flex-col justify-center items-center py-4 my-4">
                     <h2 class="text-black text-[32px] mb-2 font-medium">Another headline</h2>
                     <p class="text-black mb-4 text-xl font-light">And an even wittier subheading.</p>
                 </div>
                 <div class="h-[300px] w-[80%] bg-[#FFFFFF] rounded-t-3xl box-shadow">
                 </div>
             </div>
-            <div class=" flex flex-col justify-between items-center border-[black] w-[50%] h-full bg-[#F8F9FA]">
+            <div class="w-full h-full flex flex-col justify-between items-center border-[black] bg-[#F8F9FA] md:w-[50%]">
                 <div class="flex h-[124px] flex-col justify-center items-center py-4 my-4 bg-[#F8F9FA]">
                     <h2 class="text-black text-[32px] mb-2 font-medium">Another headline</h2>
                     <p class="text-black mb-4 text-xl font-light">And an even wittier subheading.</p>
@@ -107,13 +114,13 @@
             </div>
         </div>
     </div>
-    <footer class="bg-[#FFFFFF] w-full h-72 flex justify-center">
-        <div class="bg-[#FFFFFF] w-[960px] h-full py-12 px-4 flex">
-            <div class="px-3.5 flex flex-col justify-start gap-2 w-48 h-48">
+    <footer class="bg-[#FFFFFF] w-full h-auto flex justify-center p-6">
+        <div class="bg-[#FFFFFF] w-full max-w-[960px] h-auto py-12 px-4 flex flex-wrap justify-between">
+            <div class="px-3.5 flex flex-col justify-start gap-2 w-full md:w-48 h-auto mb-6">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="14.31" y1="8" x2="20.05" y2="17.94"></line><line x1="9.69" y1="8" x2="21.17" y2="8"></line><line x1="7.38" y1="12" x2="13.12" y2="2.06"></line><line x1="9.69" y1="16" x2="3.95" y2="6.06"></line><line x1="14.31" y1="16" x2="2.83" y2="16"></line><line x1="16.62" y1="12" x2="10.88" y2="21.94"></line></svg>
                 <small class="text-[#6C757D]">© 2017-2018</small>
             </div>
-            <div class="px-3.5 flex flex-col justify-start w-48 h-48">
+            <div class="px-3.5 flex flex-col justify-start w-full md:w-48 h-auto mb-6">
                 <h5 class="text-xl font-medium">Features</h5>
                 <ul class="list-none">
                     <li><a class="text-[#6C757D]" href="#">Cool stuff</a></li>
@@ -124,7 +131,7 @@
                     <li><a class="text-[#6C757D]" href="#">Last time</a></li>
                 </ul>
             </div>
-            <div class="px-3.5 flex flex-col justify-start w-48 h-48">
+            <div class="px-3.5 flex flex-col justify-start w-full md:w-48 h-auto mb-6">
                 <h5 class="text-xl font-medium">Resources</h5>
                 <ul class="list-none">
                     <li><a class="text-[#6C757D]" href="#">Resource</a></li>
@@ -133,7 +140,7 @@
                     <li><a class="text-[#6C757D]" href="#">Final resource</a></li>
                 </ul>
             </div>
-            <div class="px-3.5 flex flex-col justify-start w-48 h-48">
+            <div class="px-3.5 flex flex-col justify-start w-full md:w-48 h-auto mb-6">
                 <h5 class="text-xl font-medium">Resources</h5>
                 <ul class="list-none">
                     <li><a class="text-[#6C757D]" href="#">Business</a></li>
